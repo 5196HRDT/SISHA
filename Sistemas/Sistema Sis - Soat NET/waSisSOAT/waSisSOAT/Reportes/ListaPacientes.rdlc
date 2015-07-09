@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="dbCajaConnectionString">
+      <rd:DataSourceID>cd3069da-4f24-4d6f-8b84-839efcbba758</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=ServidorSQL;Initial Catalog=dbCaja;User ID=sa;Password=hrdt2003</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="txtFecha">
+        <Top>1.75cm</Top>
+        <Width>7.75cm</Width>
+        <Style>
+          <FontSize>18pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>9.5cm</Left>
+        <Height>0.75cm</Height>
+        <Value>01/01/2008 AL 31/12/2008</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Top>1.75cm</Top>
+        <Width>9cm</Width>
+        <Style>
+          <FontSize>18pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.75cm</Height>
+        <Value>ATENCIONES SIS ENTRE EL</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Width>3.75cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>12.25cm</Left>
+        <Height>0.5cm</Height>
+        <Value>Seguro Integral de Salud</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <Top>0.89418cm</Top>
+        <Width>3.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.62698cm</Left>
+        <Height>0.5cm</Height>
+        <Value>UNIDAD DE SEGUROS</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Top>0.42063cm</Top>
+        <Width>5.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.63228cm</Left>
+        <Height>0.5cm</Height>
+        <Value>Hospital Regional Docente de Trujillo</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>5.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>DIRECCION DE SALUD LA LIBERTAD</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>3.5cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>5106f40a-bd3b-4cce-b086-d5bcb7f22605</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="dbCajaDataSet_tempRepAtenSIS">
+      <Fields>
+        <Field Name="Formato">
+          <DataField>Formato</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Afiliado">
+          <DataField>Afiliado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Situacion">
+          <DataField>Situacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlanSIS">
+          <DataField>PlanSIS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Historia">
+          <DataField>Historia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Paciente">
+          <DataField>Paciente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaAtencion">
+          <DataField>FechaAtencion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaAlta">
+          <DataField>FechaAlta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EsReferido">
+          <DataField>EsReferido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SubEspecialidad">
+          <DataField>SubEspecialidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Especialidad">
+          <DataField>Especialidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>dbCajaConnectionString</DataSourceName>
+        <CommandText>SELECT Formato, Afiliado, Situacion, PlanSIS, Historia, Paciente, FechaAtencion, FechaAlta, EsReferido, SubEspecialidad, Especialidad FROM dbo.tempRepAtenSIS</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dbCajaDataSet</rd:DataSetName>
+        <rd:TableName>tempRepAtenSIS</rd:TableName>
+        <rd:TableAdapterName>tempRepAtenSISTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>20.75cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="SubEspecialidad">
+        <rd:DefaultName>SubEspecialidad</rd:DefaultName>
+        <Width>4.19709cm</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>15.16799cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!SubEspecialidad.Value)</Value>
+      </Textbox>
+      <Textbox Name="FechaAlta">
+        <rd:DefaultName>FechaAlta</rd:DefaultName>
+        <Width>1.14418cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>13.83862cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!FechaAlta.Value)</Value>
+      </Textbox>
+      <Textbox Name="FechaAtencion">
+        <rd:DefaultName>FechaAtencion</rd:DefaultName>
+        <Width>1.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>12.50926cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!FechaAtencion.Value)</Value>
+      </Textbox>
+      <Textbox Name="PlanSIS_1">
+        <rd:DefaultName>PlanSIS_1</rd:DefaultName>
+        <Width>3.75cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>8.61508cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!PlanSIS.Value)</Value>
+      </Textbox>
+      <Textbox Name="Historia">
+        <rd:DefaultName>Historia</rd:DefaultName>
+        <Width>1.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.21164cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!Historia.Value)</Value>
+      </Textbox>
+      <Textbox Name="PlanSIS">
+        <rd:DefaultName>PlanSIS</rd:DefaultName>
+        <Width>0.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.60582cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!PlanSIS.Value)</Value>
+      </Textbox>
+      <Textbox Name="Situacion">
+        <rd:DefaultName>Situacion</rd:DefaultName>
+        <Width>1cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!Situacion.Value)</Value>
+      </Textbox>
+      <Textbox Name="Afiliado">
+        <rd:DefaultName>Afiliado</rd:DefaultName>
+        <Width>2.75cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!Afiliado.Value)</Value>
+      </Textbox>
+      <Textbox Name="Formato">
+        <rd:DefaultName>Formato</rd:DefaultName>
+        <Width>2.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.5cm</Height>
+        <Value>=First(Fields!Formato.Value)</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>9cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

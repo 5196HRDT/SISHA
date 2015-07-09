@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3438C321-523A-432E-BBD3-2ACE5B53E6B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>waAlmacenFar.My.MyApplication</StartupObject>
+    <RootNamespace>waAlmacenFar</RootNamespace>
+    <AssemblyName>waAlmacenFar</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>waAlmacenFar.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>waAlmacenFar.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Medicamento.vb" />
+    <Compile Include="Clases\Parametro.vb" />
+    <Compile Include="Clases\Pecosa.vb" />
+    <Compile Include="Clases\Unidad.vb" />
+    <Compile Include="frmDispensacion.Designer.vb">
+      <DependentUpon>frmDispensacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDispensacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaInventarioFar.Designer.vb">
+      <DependentUpon>frmListaInventarioFar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaInventarioFar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedicamento.Designer.vb">
+      <DependentUpon>frmMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoAlm.Designer.vb">
+      <DependentUpon>frmMovimientoAlm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientoAlm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPecosa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPecosa.Designer.vb">
+      <DependentUpon>frmPecosa.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnidad.Designer.vb">
+      <DependentUpon>frmUnidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaInventarioAlm.Designer.vb">
+      <DependentUpon>ListaInventarioAlm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaInventarioAlm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo\Conexion.vb" />
+    <Compile Include="Modulo\Documento.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmDispensacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDispensacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaInventarioFar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmListaInventarioFar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedicamento.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPecosa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPecosa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnidad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUnidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaInventarioAlm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ListaInventarioAlm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\Medicina.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

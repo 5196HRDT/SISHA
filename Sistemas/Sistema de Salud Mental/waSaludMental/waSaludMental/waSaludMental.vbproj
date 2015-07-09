@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12C91288-F439-43B5-88F5-D40AD16EDE93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>waSaludMental.My.MyApplication</StartupObject>
+    <RootNamespace>waSaludMental</RootNamespace>
+    <AssemblyName>waSaludMental</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>waSaludMental.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>waSaludMental.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Certificado\frmMenuCertificado.Designer.vb">
+      <DependentUpon>frmMenuCertificado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Certificado\frmMenuCertificado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\clsCertificado.vb" />
+    <Compile Include="Clases\clsCie10.vb" />
+    <Compile Include="Clases\clsDetInformeArmasSM.vb" />
+    <Compile Include="Tramite\frmCertificadoTra.Designer.vb">
+      <DependentUpon>frmCertificadoTra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmCertificadoTra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\clsFormato.vb" />
+    <Compile Include="Clases\clsHistoria.vb" />
+    <Compile Include="Clases\clsInformeClinicoSM.vb" />
+    <Compile Include="Clases\clsInformeSM.vb" />
+    <Compile Include="Clases\clsMedico.vb" />
+    <Compile Include="Clases\clsUsuario.vb" />
+    <Compile Include="Clases\clsCupoSM.vb" />
+    <Compile Include="Consultorio\frmFormato.Designer.vb">
+      <DependentUpon>frmFormato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultorio\frmFormato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultorio\frmInforme.Designer.vb">
+      <DependentUpon>frmInforme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultorio\frmInforme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultorio\frmMenuConsultorio.Designer.vb">
+      <DependentUpon>frmMenuConsultorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultorio\frmMenuConsultorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cupos\frmCitas.Designer.vb">
+      <DependentUpon>frmCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cupos\frmCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cupos\frmMenuCupos.Designer.vb">
+      <DependentUpon>frmMenuCupos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cupos\frmMenuCupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceso.Designer.vb">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.Designer.vb">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClaves.Designer.vb">
+      <DependentUpon>frmClaves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClaves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\mProgramacion.vb" />
+    <Compile Include="Modulos\mVariables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Certificado\frmCertificadoArmTra.Designer.vb">
+      <DependentUpon>frmCertificadoArmTra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Certificado\frmCertificadoArmTra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmMenuTramite.Designer.vb">
+      <DependentUpon>frmMenuTramite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmMenuTramite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Certificado\frmMenuCertificado.resx">
+      <DependentUpon>frmMenuCertificado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmCertificadoTra.resx">
+      <DependentUpon>frmCertificadoTra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultorio\frmFormato.resx">
+      <DependentUpon>frmFormato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultorio\frmInforme.resx">
+      <DependentUpon>frmInforme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultorio\frmMenuConsultorio.resx">
+      <DependentUpon>frmMenuConsultorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cupos\frmCitas.resx">
+      <DependentUpon>frmCitas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cupos\frmMenuCupos.resx">
+      <DependentUpon>frmMenuCupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcceso.resx">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarUsuario.resx">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClaves.resx">
+      <DependentUpon>frmClaves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificado\frmCertificadoArmTra.resx">
+      <DependentUpon>frmCertificadoArmTra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmMenuTramite.resx">
+      <DependentUpon>frmMenuTramite.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Salud Mental\EscudoGobierno.jpg" />
+    <Content Include="Salud Mental\EscudoGobiernoDoc.jpg" />
+    <Content Include="Salud Mental\HRDT.gif" />
+    <Content Include="Salud Mental\HRDTDoc.jpg" />
+    <Content Include="Salud Mental\SaludMental.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

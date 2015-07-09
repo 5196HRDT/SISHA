@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47F37FF2-4733-47CE-951C-EE6248E2B2D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>waTramiteDocumentario.My.MyApplication</StartupObject>
+    <RootNamespace>waTramiteDocumentario</RootNamespace>
+    <AssemblyName>waTramiteDocumentario</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <OptionCompare>Text</OptionCompare>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>waTramiteDocumentario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>waTramiteDocumentario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.1.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Librerias\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Adjunto.vb" />
+    <Compile Include="Clases\Agripa.vb" />
+    <Compile Include="Clases\Archivador.vb" />
+    <Compile Include="Clases\Cargo.vb" />
+    <Compile Include="Clases\clsAsignacionCargo.vb" />
+    <Compile Include="Clases\clsHojaEnvio.vb" />
+    <Compile Include="Clases\ConCopia.vb" />
+    <Compile Include="Clases\Documento.vb" />
+    <Compile Include="Clases\DptoUnidad.vb" />
+    <Compile Include="Clases\MotivoDelPAse.vb" />
+    <Compile Include="Clases\MotivoEnvio.vb" />
+    <Compile Include="Clases\NivelCargo.vb" />
+    <Compile Include="Clases\NombreDelAnio.vb" />
+    <Compile Include="Clases\Numeracion.vb" />
+    <Compile Include="Clases\Parametro.vb" />
+    <Compile Include="Clases\Referencia.vb" />
+    <Compile Include="Clases\ServiArea.vb" />
+    <Compile Include="Clases\TipoDocAdj.vb" />
+    <Compile Include="Clases\TipoDocumento.vb" />
+    <Compile Include="Clases\TipoJerarquia.vb" />
+    <Compile Include="Clases\Titulo.vb" />
+    <Compile Include="Clases\Trabajador.vb" />
+    <Compile Include="Clases\Usuario.vb" />
+    <Compile Include="frmAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceso.Designer.vb">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgripa.Designer.vb">
+      <DependentUpon>frmAgripa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgripa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarTrabajador.Designer.vb">
+      <DependentUpon>frmBuscarTrabajador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarTrabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.Designer.vb">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentoExt.Designer.vb">
+      <DependentUpon>frmDocumentoExt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentoExt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentos.Designer.vb">
+      <DependentUpon>frmDocumentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResponderDocPendiente.Designer.vb">
+      <DependentUpon>frmResponderDocPendiente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResponderDocPendiente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Conexion.vb" />
+    <Compile Include="Oficina\frmArchivador.Designer.vb">
+      <DependentUpon>frmArchivador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\frmArchivador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oficina\frmNumeracionOficina.Designer.vb">
+      <DependentUpon>frmNumeracionOficina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\frmNumeracionOficina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmAsignacionCargo.Designer.vb">
+      <DependentUpon>frmAsignacionCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmAsignacionCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmCargo.Designer.vb">
+      <DependentUpon>frmCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmDptoUnidad.Designer.vb">
+      <DependentUpon>frmDptoUnidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmDptoUnidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnviarDocumento.Designer.vb">
+      <DependentUpon>frmEnviarDocumento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnviarDocumento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngAgripa.Designer.vb">
+      <DependentUpon>frmIngAgripa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIngAgripa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oficina\frmMenuOficina.Designer.vb">
+      <DependentUpon>frmMenuOficina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\frmMenuOficina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmNumeracion.Designer.vb">
+      <DependentUpon>frmNumeracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmNumeracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPruebaPDF.Designer.vb">
+      <DependentUpon>frmPruebaPDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPruebaPDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmServiArea.Designer.vb">
+      <DependentUpon>frmServiArea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmServiArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmTipoDocumento.Designer.vb">
+      <DependentUpon>frmTipoDocumento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmTipoDocumento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Programacion.vb" />
+    <Compile Include="Modulos\VariablesGlobales.vb" />
+    <Compile Include="Tramite\frmMotivoDelPase.Designer.vb">
+      <DependentUpon>frmMotivoDelPase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmMotivoDelPase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tramite\frmTipoJerarquia.Designer.vb">
+      <DependentUpon>frmTipoJerarquia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmTipoJerarquia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmTitulo.Designer.vb">
+      <DependentUpon>frmTitulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmTitulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmTrabajadores.Designer.vb">
+      <DependentUpon>frmTrabajadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmTrabajadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\frmNombreDelAnio.Designer.vb">
+      <DependentUpon>frmNombreDelAnio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\frmNombreDelAnio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAcceso.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgripa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAgripa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarTrabajador.resx">
+      <DependentUpon>frmBuscarTrabajador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarUsuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentoExt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDocumentoExt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDocumentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResponderDocPendiente.resx">
+      <DependentUpon>frmResponderDocPendiente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficina\frmArchivador.resx">
+      <DependentUpon>frmArchivador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficina\frmNumeracionOficina.resx">
+      <DependentUpon>frmNumeracionOficina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmAsignacionCargo.resx">
+      <DependentUpon>frmAsignacionCargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmCargo.resx">
+      <DependentUpon>frmCargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmDptoUnidad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDptoUnidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnviarDocumento.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEnviarDocumento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngAgripa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIngAgripa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficina\frmMenuOficina.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMenuOficina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmMotivoDelPase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMotivoDelPase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmNumeracion.resx">
+      <DependentUpon>frmNumeracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPruebaPDF.resx">
+      <DependentUpon>frmPruebaPDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmServiArea.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmServiArea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmTipoDocumento.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTipoDocumento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmTipoJerarquia.resx">
+      <DependentUpon>frmTipoJerarquia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmTitulo.resx">
+      <DependentUpon>frmTitulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmTrabajadores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTrabajadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\frmNombreDelAnio.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNombreDelAnio.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\DocOficiales.jpg" />
+    <None Include="Imagenes\DocOficiales2.jpg" />
+    <Content Include="Imagenes\EscudoRegion.GIF" />
+    <Content Include="Imagenes\TramiteDoc.jpg" />
+    <Content Include="Librerias\itextsharp.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IasHelperLib">
+      <Guid>{6BC096BB-0CE6-11D1-BAAE-00C04FC2E20D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

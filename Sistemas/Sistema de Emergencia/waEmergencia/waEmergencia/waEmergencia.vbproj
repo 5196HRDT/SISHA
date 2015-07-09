@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F325241-DD91-4099-AFEB-7511B3E3DA89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>waEmergencia.My.MyApplication</StartupObject>
+    <RootNamespace>waEmergencia</RootNamespace>
+    <AssemblyName>waEmergencia</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>waEmergencia.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>waEmergencia.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagenes\IconoEmergencia.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4058.19167, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libreria\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asistencial\frmAlta.Designer.vb">
+      <DependentUpon>frmAlta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmAlta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmAnamnesis.Designer.vb">
+      <DependentUpon>frmAnamnesis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmAnamnesis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmConsultaExterna.Designer.vb">
+      <DependentUpon>frmConsultaExterna.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmConsultaExterna.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmDuplicadoAlta.Designer.vb">
+      <DependentUpon>frmDuplicadoAlta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmDuplicadoAlta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmFarmaciaSIS.Designer.vb">
+      <DependentUpon>frmFarmaciaSIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmFarmaciaSIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmHistoriaEmergencia.Designer.vb">
+      <DependentUpon>frmHistoriaEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmHistoriaEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmHojaTerapeutica.Designer.vb">
+      <DependentUpon>frmHojaTerapeutica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmHojaTerapeutica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmImagenes.Designer.vb">
+      <DependentUpon>frmImagenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmImagenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmInformeEKG.Designer.vb">
+      <DependentUpon>frmInformeEKG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmInformeEKG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmInterconsulta.Designer.vb">
+      <DependentUpon>frmInterconsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmInterconsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmLaboratorio.Designer.vb">
+      <DependentUpon>frmLaboratorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmLaboratorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmNotaEvolucion.Designer.vb">
+      <DependentUpon>frmNotaEvolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmNotaEvolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmPapeletaHospitalizacion.Designer.vb">
+      <DependentUpon>frmPapeletaHospitalizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmPapeletaHospitalizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmPatologia.Designer.vb">
+      <DependentUpon>frmPatologia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmPatologia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmProcedimientos.Designer.vb">
+      <DependentUpon>frmProcedimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmProcedimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmRadiologiaEco.Designer.vb">
+      <DependentUpon>frmRadiologiaEco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmRadiologiaEco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmVisor.Designer.vb">
+      <DependentUpon>frmVisor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmVisor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\clsCentroSaludSIS.vb" />
+    <Compile Include="Clases\clsCIE10HE.vb" />
+    <Compile Include="Clases\clsCondicionAlta.vb" />
+    <Compile Include="Clases\clsConsulta.vb" />
+    <Compile Include="Clases\clsConvenio.vb" />
+    <Compile Include="Clases\clsCupo.vb" />
+    <Compile Include="Clases\clsDestinoFinal.vb" />
+    <Compile Include="Clases\clsDetalleLaboratorioEmer.vb" />
+    <Compile Include="Clases\clsDosis.vb" />
+    <Compile Include="Clases\clsEmergenciaIngreso.vb" />
+    <Compile Include="Clases\clsEmergenciaIngreso_Alta.vb" />
+    <Compile Include="Clases\clsEmergenciaIngreso_Consulta.vb" />
+    <Compile Include="Clases\clsEmergenciaSer.vb" />
+    <Compile Include="Clases\clsEncefalograma.vb" />
+    <Compile Include="Clases\clsEstadoCivil.vb" />
+    <Compile Include="Clases\clsGradoInstruccion.vb" />
+    <Compile Include="Clases\clsHistoria.vb" />
+    <Compile Include="Clases\clsHospitalizacion.vb" />
+    <Compile Include="Clases\clsInformeEKG.vb" />
+    <Compile Include="Clases\clsInformeEKGCie.vb" />
+    <Compile Include="Clases\clsInterconsulta.vb" />
+    <Compile Include="Clases\clsItemServicio.vb" />
+    <Compile Include="Clases\clsMedicamento.vb" />
+    <Compile Include="Clases\clsMedico.vb" />
+    <Compile Include="Clases\clsNota.vb" />
+    <Compile Include="Clases\clsPatologia.vb" />
+    <Compile Include="Clases\clsRayos.vb" />
+    <Compile Include="Clases\clsRecetaMedicaSIS.vb" />
+    <Compile Include="Clases\clsServicioEmergencia.vb" />
+    <Compile Include="Clases\clsServicioItem.vb" />
+    <Compile Include="Clases\clsSIS.vb" />
+    <Compile Include="Clases\clsSoat.vb" />
+    <Compile Include="Clases\clsTipoAlta.vb" />
+    <Compile Include="Clases\clsTipoTarifa.vb" />
+    <Compile Include="Clases\clsUbigeo.vb" />
+    <Compile Include="Clases\clsUsuario.vb" />
+    <Compile Include="Clases\ColegioProfesional.vb" />
+    <Compile Include="Clases\CondicionContrato.vb" />
+    <Compile Include="Clases\DepositoImagen.vb" />
+    <Compile Include="Clases\Especialidad.vb" />
+    <Compile Include="Clases\EspecialidadH.vb" />
+    <Compile Include="Clases\Medico.vb" />
+    <Compile Include="Clases\PapeletaHospitalizacion.vb" />
+    <Compile Include="Clases\PapeletaHospitalizacionCIE.vb" />
+    <Compile Include="Clases\Profesion.vb" />
+    <Compile Include="Clases\ServicioH.vb" />
+    <Compile Include="Clases\SubEspecialidad.vb" />
+    <Compile Include="Clases\SubServicioH.vb" />
+    <Compile Include="Cuenta Corriente\frmCuentaPaciente.Designer.vb">
+      <DependentUpon>frmCuentaPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta Corriente\frmCuentaPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuenta Corriente\frmMenuCuenta.Designer.vb">
+      <DependentUpon>frmMenuCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta Corriente\frmMenuCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadistica\frmCodigoSISSOAT.Designer.vb">
+      <DependentUpon>frmCodigoSISSOAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadistica\frmCodigoSISSOAT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadistica\frmDuplicadoHoja.Designer.vb">
+      <DependentUpon>frmDuplicadoHoja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadistica\frmDuplicadoHoja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadistica\frmMenuEmergencia.Designer.vb">
+      <DependentUpon>frmMenuEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadistica\frmMenuEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceso.Designer.vb">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencial\frmMenuMedico.Designer.vb">
+      <DependentUpon>frmMenuMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencial\frmMenuMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.Designer.vb">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClaves.Designer.vb">
+      <DependentUpon>frmClaves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClaves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadistica\frmIngresoEmer.Designer.vb">
+      <DependentUpon>frmIngresoEmer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadistica\frmIngresoEmer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historia\frmMenuHistoria.Designer.vb">
+      <DependentUpon>frmMenuHistoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Historia\frmMenuHistoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historia\frmProcedimientoCE.Designer.vb">
+      <DependentUpon>frmProcedimientoCE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Historia\frmProcedimientoCE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historia\frmElectro.Designer.vb">
+      <DependentUpon>frmElectro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Historia\frmElectro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\mProgramacion.vb" />
+    <Compile Include="Modulos\mVariablesGlobales.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Procesamiento\frmCie10.Designer.vb">
+      <DependentUpon>frmCie10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmCie10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento\frmControlIngreso.Designer.vb">
+      <DependentUpon>frmControlIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmControlIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento\frmInformeEmergencia.Designer.vb">
+      <DependentUpon>frmInformeEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmInformeEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento\frmMedico.Designer.vb">
+      <DependentUpon>frmMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento\frmMenuPro.Designer.vb">
+      <DependentUpon>frmMenuPro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmMenuPro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento\frmProcesamiento.Designer.vb">
+      <DependentUpon>frmProcesamiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmProcesamiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento\frmReporte.Designer.vb">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento\frmReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Asistencial\frmAlta.resx">
+      <DependentUpon>frmAlta.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmAnamnesis.resx">
+      <DependentUpon>frmAnamnesis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmConsultaExterna.resx">
+      <DependentUpon>frmConsultaExterna.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmDuplicadoAlta.resx">
+      <DependentUpon>frmDuplicadoAlta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmFarmaciaSIS.resx">
+      <DependentUpon>frmFarmaciaSIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmHistoriaEmergencia.resx">
+      <DependentUpon>frmHistoriaEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmImagenes.resx">
+      <DependentUpon>frmImagenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmInformeEKG.resx">
+      <DependentUpon>frmInformeEKG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmInterconsulta.resx">
+      <DependentUpon>frmInterconsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmLaboratorio.resx">
+      <DependentUpon>frmLaboratorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmNotaEvolucion.resx">
+      <DependentUpon>frmNotaEvolucion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmPapeletaHospitalizacion.resx">
+      <DependentUpon>frmPapeletaHospitalizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmPatologia.resx">
+      <DependentUpon>frmPatologia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmProcedimientos.resx">
+      <DependentUpon>frmProcedimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmRadiologiaEco.resx">
+      <DependentUpon>frmRadiologiaEco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmVisor.resx">
+      <DependentUpon>frmVisor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuenta Corriente\frmCuentaPaciente.resx">
+      <DependentUpon>frmCuentaPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuenta Corriente\frmMenuCuenta.resx">
+      <DependentUpon>frmMenuCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadistica\frmCodigoSISSOAT.resx">
+      <DependentUpon>frmCodigoSISSOAT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadistica\frmDuplicadoHoja.resx">
+      <DependentUpon>frmDuplicadoHoja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadistica\frmIngresoEmer.resx">
+      <DependentUpon>frmIngresoEmer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadistica\frmMenuEmergencia.resx">
+      <DependentUpon>frmMenuEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcceso.resx">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencial\frmMenuMedico.resx">
+      <DependentUpon>frmMenuMedico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarUsuario.resx">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClaves.resx">
+      <DependentUpon>frmClaves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historia\frmElectro.resx">
+      <DependentUpon>frmElectro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historia\frmMenuHistoria.resx">
+      <DependentUpon>frmMenuHistoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historia\frmProcedimientoCE.resx">
+      <DependentUpon>frmProcedimientoCE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmCie10.resx">
+      <DependentUpon>frmCie10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmControlIngreso.resx">
+      <DependentUpon>frmControlIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmInformeEmergencia.resx">
+      <DependentUpon>frmInformeEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmMedico.resx">
+      <DependentUpon>frmMedico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmMenuPro.resx">
+      <DependentUpon>frmMenuPro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmProcesamiento.resx">
+      <DependentUpon>frmProcesamiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento\frmReporte.resx">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\FondoEmergencia.png" />
+    <Content Include="Imagenes\IconoEmergencia.ico" />
+    <Content Include="Imagenes\imgQR.jpg" />
+    <Content Include="Libreria\ThoughtWorks.QRCode.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

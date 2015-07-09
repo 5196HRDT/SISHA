@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A4A9707-79B0-44D3-A862-A8E48F4280C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>waLaboratorioClinico.My.MyApplication</StartupObject>
+    <RootNamespace>waLaboratorioClinico</RootNamespace>
+    <AssemblyName>waLaboratorioClinico</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>waLaboratorioClinico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>waLaboratorioClinico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagenes\laboratorio.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4058.19167, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libreria\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\frmBolsaColectoraSangre.Designer.vb">
+      <DependentUpon>frmBolsaColectoraSangre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmBolsaColectoraSangre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmProduccionCE.Designer.vb">
+      <DependentUpon>frmProduccionCE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmProduccionCE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmProduccionEmergencia.Designer.vb">
+      <DependentUpon>frmProduccionEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmProduccionEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmRepConsultaExterna.Designer.vb">
+      <DependentUpon>frmRepConsultaExterna.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmRepConsultaExterna.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmRepEmergencia.Designer.vb">
+      <DependentUpon>frmRepEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmRepEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmReporteProcets.Designer.vb">
+      <DependentUpon>frmReporteProcets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmReporteProcets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmResultadosRes.Designer.vb">
+      <DependentUpon>frmResultadosRes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmResultadosRes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atencion\frmIngresoExamenes.Designer.vb">
+      <DependentUpon>frmIngresoExamenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Atencion\frmIngresoExamenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atencion\frmListaAtencionEmergencia.Designer.vb">
+      <DependentUpon>frmListaAtencionEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Atencion\frmListaAtencionEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atencion\frmResultadosEmergencia.Designer.vb">
+      <DependentUpon>frmResultadosEmergencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Atencion\frmResultadosEmergencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Central\frmActualizarDatosCE.Designer.vb">
+      <DependentUpon>frmActualizarDatosCE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Central\frmActualizarDatosCE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Central\frmMenuCentral.Designer.vb">
+      <DependentUpon>frmMenuCentral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Central\frmMenuCentral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Central\frmMuestras.Designer.vb">
+      <DependentUpon>frmMuestras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Central\frmMuestras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Central\frmResultadoCentral.Designer.vb">
+      <DependentUpon>frmResultadoCentral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Central\frmResultadoCentral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Central\frmTamizajeSIS.Designer.vb">
+      <DependentUpon>frmTamizajeSIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Central\frmTamizajeSIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\AnalisisInternosLab.vb" />
+    <Compile Include="Clases\clsComprobanteVta.vb" />
+    <Compile Include="Clases\clsConsultaExterna.vb" />
+    <Compile Include="Clases\clsControlAnulacionResLab.vb" />
+    <Compile Include="Clases\clsConvenio.vb" />
+    <Compile Include="Clases\clsDetalleHospitalizacion.vb" />
+    <Compile Include="Clases\clsEmergenciaIngreso.vb" />
+    <Compile Include="Clases\clsEmergenciaIngreso_Consulta.vb" />
+    <Compile Include="Clases\clsEmergenciaSer.vb" />
+    <Compile Include="Clases\clsEstadoCivil.vb" />
+    <Compile Include="Clases\clsGrupoSanguineo.vb" />
+    <Compile Include="Clases\clsHistoria.vb" />
+    <Compile Include="Clases\clsHospitalizacion.vb" />
+    <Compile Include="Clases\clsIngresoCIE.vb" />
+    <Compile Include="Clases\clsIngresoHospitalizacion.vb" />
+    <Compile Include="Clases\clsInterconsultaE.vb" />
+    <Compile Include="Clases\clsItem.vb" />
+    <Compile Include="Clases\clsItemServicio.vb" />
+    <Compile Include="Clases\clsMes.vb" />
+    <Compile Include="Clases\clsReportes.vb" />
+    <Compile Include="Clases\clsServicioItem.vb" />
+    <Compile Include="Clases\clsSIS.vb" />
+    <Compile Include="Clases\clsSOAT.vb" />
+    <Compile Include="Clases\clstempListaAtenLabCE.vb" />
+    <Compile Include="Clases\clstempListaAtenLabEmer.vb" />
+    <Compile Include="Clases\clsTipoPacienteHIS.vb" />
+    <Compile Include="Clases\clsUsuario.vb" />
+    <Compile Include="Clases\ControlDonacion.vb" />
+    <Compile Include="Clases\FichaSOAT.vb" />
+    <Compile Include="Clases\ItemServicio.vb" />
+    <Compile Include="Clases\ProduccionLaboratorio.vb" />
+    <Compile Include="Clases\Servicio.vb" />
+    <Compile Include="Clases\SIS.vb" />
+    <Compile Include="Clases\tempLabPro.vb" />
+    <Compile Include="Administracion\frmClasificarTar.Designer.vb">
+      <DependentUpon>frmClasificarTar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmClasificarTar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmConsultaClas.Designer.vb">
+      <DependentUpon>frmConsultaClas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmConsultaClas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcceso.Designer.vb">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.Designer.vb">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControlDonante.Designer.vb">
+      <DependentUpon>frmControlDonante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmControlDonante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLaboratorioSOAT.Designer.vb">
+      <DependentUpon>frmLaboratorioSOAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLaboratorioSOAT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atencion\frmMenuAtencion.Designer.vb">
+      <DependentUpon>frmMenuAtencion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Atencion\frmMenuAtencion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtroClas.Designer.vb">
+      <DependentUpon>frmOtroClas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtroClas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmParametros.designer.vb">
+      <DependentUpon>frmParametros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmParametros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduccionLab.Designer.vb">
+      <DependentUpon>frmProduccionLab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduccionLab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepPacCom.Designer.vb">
+      <DependentUpon>frmRepPacCom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepPacCom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepPacCoSe.Designer.vb">
+      <DependentUpon>frmRepPacCoSe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepPacCoSe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicio.designer.vb">
+      <DependentUpon>frmServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicioHRDTLab.Designer.vb">
+      <DependentUpon>frmServicioHRDTLab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicioHRDTLab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerificacion.Designer.vb">
+      <DependentUpon>frmVerificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\Laboratorio.vb" />
+    <Compile Include="frmVerificarSis.Designer.vb">
+      <DependentUpon>frmVerificarSis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerificarSis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepPacSIS.Designer.vb">
+      <DependentUpon>frmRepPacSIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepPacSIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospitalizacion\frmMenuHospitalizacion.Designer.vb">
+      <DependentUpon>frmMenuHospitalizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hospitalizacion\frmMenuHospitalizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospitalizacion\frmResultadoHosp.Designer.vb">
+      <DependentUpon>frmResultadoHosp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hospitalizacion\frmResultadoHosp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospitalizacion\frmSolicitud.Designer.vb">
+      <DependentUpon>frmSolicitud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hospitalizacion\frmSolicitud.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\modProgramacion.vb" />
+    <Compile Include="Modulos\mVariablesGlobales.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administracion\frmBolsaColectoraSangre.resx">
+      <DependentUpon>frmBolsaColectoraSangre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmClasificarTar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmClasificarTar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmConsultaClas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConsultaClas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmProduccionCE.resx">
+      <DependentUpon>frmProduccionCE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmProduccionEmergencia.resx">
+      <DependentUpon>frmProduccionEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmRepConsultaExterna.resx">
+      <DependentUpon>frmRepConsultaExterna.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmRepEmergencia.resx">
+      <DependentUpon>frmRepEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmReporteProcets.resx">
+      <DependentUpon>frmReporteProcets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmResultadosRes.resx">
+      <DependentUpon>frmResultadosRes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atencion\frmIngresoExamenes.resx">
+      <DependentUpon>frmIngresoExamenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atencion\frmListaAtencionEmergencia.resx">
+      <DependentUpon>frmListaAtencionEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atencion\frmResultadosEmergencia.resx">
+      <DependentUpon>frmResultadosEmergencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Central\frmActualizarDatosCE.resx">
+      <DependentUpon>frmActualizarDatosCE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Central\frmMenuCentral.resx">
+      <DependentUpon>frmMenuCentral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Central\frmMuestras.resx">
+      <DependentUpon>frmMuestras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Central\frmResultadoCentral.resx">
+      <DependentUpon>frmResultadoCentral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Central\frmTamizajeSIS.resx">
+      <DependentUpon>frmTamizajeSIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcceso.resx">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarUsuario.resx">
+      <DependentUpon>frmCambiarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControlDonante.resx">
+      <DependentUpon>frmControlDonante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLaboratorioSOAT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLaboratorioSOAT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atencion\frmMenuAtencion.resx">
+      <DependentUpon>frmMenuAtencion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtroClas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOtroClas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmParametros.resx">
+      <DependentUpon>frmParametros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduccionLab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProduccionLab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepPacCom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRepPacCom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepPacCoSe.resx">
+      <DependentUpon>frmRepPacCoSe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicio.resx">
+      <DependentUpon>frmServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicioHRDTLab.resx">
+      <DependentUpon>frmServicioHRDTLab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerificacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVerificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerificarSis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVerificarSis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepPacSIS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRepPacSIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospitalizacion\frmMenuHospitalizacion.resx">
+      <DependentUpon>frmMenuHospitalizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospitalizacion\frmResultadoHosp.resx">
+      <DependentUpon>frmResultadoHosp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospitalizacion\frmSolicitud.resx">
+      <DependentUpon>frmSolicitud.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\FondoLaboratorio.png" />
+    <Content Include="Imagenes\laboratorio.ico" />
+    <Content Include="Imagenes\Laboratorio.jpg" />
+    <Content Include="Imagenes\LaboratorioHosp.jpg" />
+    <Content Include="Libreria\ThoughtWorks.QRCode.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
