@@ -372,7 +372,7 @@ Partial Class frmIngresoSis
         'btnGrabar
         '
         Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGrabar.Location = New System.Drawing.Point(150, 568)
+        Me.btnGrabar.Location = New System.Drawing.Point(164, 568)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 30)
         Me.btnGrabar.TabIndex = 24
@@ -817,6 +817,7 @@ Partial Class frmIngresoSis
         Me.txtGestacion.Location = New System.Drawing.Point(152, 9)
         Me.txtGestacion.Mask = "99"
         Me.txtGestacion.Name = "txtGestacion"
+        Me.txtGestacion.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtGestacion.Size = New System.Drawing.Size(53, 20)
         Me.txtGestacion.TabIndex = 18
         Me.txtGestacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -827,6 +828,7 @@ Partial Class frmIngresoSis
         Me.txtTalla.Location = New System.Drawing.Point(410, 9)
         Me.txtTalla.Mask = "999"
         Me.txtTalla.Name = "txtTalla"
+        Me.txtTalla.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtTalla.Size = New System.Drawing.Size(56, 20)
         Me.txtTalla.TabIndex = 237
         Me.txtTalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -834,12 +836,11 @@ Partial Class frmIngresoSis
         'txtPeso
         '
         Me.txtPeso.Location = New System.Drawing.Point(253, 9)
-        Me.txtPeso.Mask = "99999"
         Me.txtPeso.Name = "txtPeso"
+        Me.txtPeso.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtPeso.Size = New System.Drawing.Size(53, 20)
         Me.txtPeso.TabIndex = 19
         Me.txtPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtPeso.ValidatingType = GetType(Integer)
         '
         'Label26
         '
@@ -877,9 +878,9 @@ Partial Class frmIngresoSis
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.Location = New System.Drawing.Point(309, 12)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(32, 13)
+        Me.Label28.Size = New System.Drawing.Size(34, 13)
         Me.Label28.TabIndex = 232
-        Me.Label28.Text = "(Gr.)"
+        Me.Label28.Text = "(Kg.)"
         '
         'Label31
         '
@@ -926,9 +927,11 @@ Partial Class frmIngresoSis
         'txtIMC
         '
         Me.txtIMC.Location = New System.Drawing.Point(10, 76)
+        Me.txtIMC.MaxLength = 5
         Me.txtIMC.Name = "txtIMC"
         Me.txtIMC.Size = New System.Drawing.Size(100, 20)
         Me.txtIMC.TabIndex = 202
+        Me.txtIMC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPresionA
         '
@@ -939,7 +942,6 @@ Partial Class frmIngresoSis
         '
         'dtpFechaParto
         '
-        Me.dtpFechaParto.Enabled = False
         Me.dtpFechaParto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaParto.Location = New System.Drawing.Point(151, 30)
         Me.dtpFechaParto.Name = "dtpFechaParto"

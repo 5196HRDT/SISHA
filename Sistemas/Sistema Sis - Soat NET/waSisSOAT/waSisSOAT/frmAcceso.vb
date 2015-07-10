@@ -14,6 +14,7 @@ Public Class frmAcceso
             Inicial = dsTabla.Tables(0).Rows(0)("Inicial")
             NivelSistema = dsTabla.Tables(0).Rows(0)("Nivel")
             UsuarioSistema = txtUsuario.Text
+            objUsuario.TracerLogin(UsuarioSistema, My.Computer.Name)
             If Inicial = "1" Then
                 If dsTabla.Tables(0).Rows(0)("Nivel") = "CTASIS" Then
                     MenuCta.Show()

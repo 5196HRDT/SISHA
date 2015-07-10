@@ -225,6 +225,20 @@ Public Class frmIngresoSis
                             chkProfOc.Checked = dsTriaje.Tables(0).Rows(0)("VacunaBCG")
                             gbTriaje.Enabled = True
                         End If
+                    ElseIf Bandera = "PRP" Then
+                        Dim dsTriaje As New DataSet
+                        dsTriaje = objSIS.GestanteBuscar(idPaciente)
+                        If dsTriaje.Tables(0).Rows.Count > 0 Then
+                            tpid = dsTriaje.Tables(0).Rows(0)("IdGestante")
+                            idGestante = Val(tpid)
+                            txtPeso.Text = dsTriaje.Tables(0).Rows(0)("Peso")
+                            txtTalla.Text = dsTriaje.Tables(0).Rows(0)("Talla")
+                            txtPresionA.Text = dsTriaje.Tables(0).Rows(0)("PresionArterial")
+                            dtpFechaParto.Value = dsTriaje.Tables(0).Rows(0)("FechaParto")
+                            txtIMC.Text = ((Convert.ToDouble(txtPeso.Text) / 1000) / Math.Pow((Convert.ToDouble(txtTalla.Text) / 100), 2)).ToString("#0.00")
+                            gbTriaje.Enabled = True
+                        End If
+
                     End If
                 Else : Bandera = "CMN"
                 End If
@@ -349,8 +363,15 @@ Public Class frmIngresoSis
             Exit Sub
         End If
 
-        If cboGesPuer.SelectedIndex > 0 And (txtPeso.Text.Equals("") Or txtTalla.Text.Equals("") Or txtGestacion.Text.Equals("") _
+        If cboGesPuer.SelectedIndex = 1 And (txtPeso.Text.Equals("") Or txtTalla.Text.Equals("") Or txtGestacion.Text.Equals("") _
             Or txtPresionA.Text.Equals("")) Then
+            MessageBox.Show("Complete Los Datos!", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Exit Sub
+        End If
+
+
+        If cboGesPuer.SelectedIndex = 2 And (txtPeso.Text.Equals("") Or txtTalla.Text.Equals("") Or _
+            txtPresionA.Text.Equals("")) Then
             MessageBox.Show("Complete Los Datos!", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Exit Sub
         End If
@@ -367,8 +388,8 @@ Public Class frmIngresoSis
         Dim MontoUCI As String
         If lblFecha.Text = "" Then MessageBox.Show("Verificar Información de Fecha de Nacimiento", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : lblFecha.Select() : Exit Sub
         If Val(cboLote.Text) = 0 Or Val(txtNumero.Text) = 0 Or Val(txtNumeroA.Text) = 0 Then MessageBox.Show("Verifique que todos los codigos sean correctos", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-        If cboLoteA.Text = "" Then MessageBox.Show("Verifique que todos los codigos sean correctos", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information) : cboLoteA.Select() : Exit Sub
-        If cboLote.Text = "" Then MessageBox.Show("Debe ingresar Nro de Lote", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+        If cboLoteA.SelectedIndex = -1 Then MessageBox.Show("Verifique que todos los codigos sean correctos", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information) : cboLoteA.Select() : Exit Sub
+        If cboLoteA.SelectedIndex = -1 Then MessageBox.Show("Debe ingresar Nro de Lote", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         If dtpFV.Value <= dtpFecha.Value Then MessageBox.Show("Debe Ingresar Una Fecha Mayor a la Fecha de Contrato", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : dtpFV.Select() : Exit Sub
 
         If MessageBox.Show("Esta seguro de guardar los datos", "Mensaje de Consulta", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = Windows.Forms.DialogResult.Yes Then
@@ -402,7 +423,7 @@ Public Class frmIngresoSis
             End If
 
             If Bandera = "G" Then
-                txtIMC.Text = (Math.Round((Convert.ToDouble(txtPeso.Text) / 1000) / Math.Pow((Convert.ToDouble(txtTalla.Text) / 100), 2))).ToString
+                txtIMC.Text = (Math.Round((Convert.ToDouble(txtPeso.Text) / 1000) / Math.Pow((Convert.ToDouble(txtTalla.Text) / 100), 2))).ToString("#0.00")
                 If rbAteParV.Checked = True Then TipoParto = "PARTO VAGINAL"
                 If rbCesarea.Checked = True Then TipoParto = "CESAREA"
                 If idNeoNato > 0 Then
@@ -562,6 +583,7 @@ Public Class frmIngresoSis
     End Sub
 
     Private Sub txtTalla_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtTalla.KeyDown
+
         If Bandera = "G" And e.KeyCode = Keys.Enter Then
             txtPresionA.Select()
         ElseIf Bandera = "RN" And e.KeyCode = Keys.Enter Then
@@ -809,7 +831,10 @@ Public Class frmIngresoSis
         Me.dtpFV.Value = Me.dtpFecha.Value.Date.AddMonths(2)
     End Sub
     Private Sub cboGesPuer_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cboGesPuer.SelectedIndexChanged
-        If (cboGesPuer.SelectedIndex = 1 Or cboGesPuer.SelectedIndex = 2) Then
+       
+
+
+        If (cboGesPuer.SelectedIndex = 1) Then
             gbTriaje.Enabled = True
             Bandera = "G"
             tbDetalle.TabPages(1).Enabled = False
@@ -820,6 +845,12 @@ Public Class frmIngresoSis
             Bandera = "RN"
             tbDetalle.TabPages(1).Enabled = True
             tbDetalle.TabPages(0).Enabled = False
+
+        ElseIf cboGesPuer.SelectedIndex = 2 Then
+            gbTriaje.Enabled = True
+            Bandera = "PRP"
+            tbDetalle.TabPages(1).Enabled = False
+            tbDetalle.TabPages(0).Enabled = True
         Else
             Bandera = "CMN"
             gbTriaje.Enabled = False
@@ -937,5 +968,10 @@ Public Class frmIngresoSis
             frmBuscarSIS.Show()
         End If
 
+    End Sub
+
+
+    Private Sub txtPeso_LostFocus(sender As Object, e As EventArgs) Handles txtPeso.LostFocus
+        txtPeso.Text = txtPeso.Text.Trim
     End Sub
 End Class
