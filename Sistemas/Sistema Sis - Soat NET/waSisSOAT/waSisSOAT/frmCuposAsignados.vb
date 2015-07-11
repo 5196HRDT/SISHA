@@ -60,7 +60,7 @@
                 Next
                 lvTabla.Items.Clear()
             End If
-        Else : MessageBox.Show("AHORA NO JOVEN, AUN NO ES HORA!.. " + UsuarioSistema + " SEA PACIENTE", "Mensaje Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Else : MessageBox.Show("AHORA NO JOVEN, AUN NO ES HORA!!.. " + vbCrLf + "SR. " + NombreUsuario + " - SEA PACIENTE", "Mensaje Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
     Private Sub pdcDocumento_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles pdcDocumento.BeginPrint

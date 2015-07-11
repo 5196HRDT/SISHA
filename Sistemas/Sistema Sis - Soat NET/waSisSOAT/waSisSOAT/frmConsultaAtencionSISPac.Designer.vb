@@ -204,6 +204,7 @@ Partial Class frmConsultaAtencionSISPac
         Me.txtHistoria.Name = "txtHistoria"
         Me.txtHistoria.Size = New System.Drawing.Size(172, 23)
         Me.txtHistoria.TabIndex = 0
+        Me.txtHistoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label14
         '

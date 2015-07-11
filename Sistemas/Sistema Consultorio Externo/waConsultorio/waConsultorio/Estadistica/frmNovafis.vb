@@ -4997,9 +4997,7 @@ Public Class frmNovafis
         End If
     End Sub
 
-    Private Sub lvMedicos1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lvMedicos1.SelectedIndexChanged
-
-    End Sub
+  
 
     Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
         If txtDNI.Text <> "" And txtDNI.Text.Length <> 8 Then MessageBox.Show("Debe ingresar un Nro de DNI igual a 8 Dígitos", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : txtDNI.Select() : Exit Sub

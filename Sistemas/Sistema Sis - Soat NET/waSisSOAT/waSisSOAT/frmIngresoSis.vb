@@ -391,7 +391,6 @@ Public Class frmIngresoSis
         If cboLoteA.SelectedIndex = -1 Then MessageBox.Show("Verifique que todos los codigos sean correctos", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information) : cboLoteA.Select() : Exit Sub
         If cboLoteA.SelectedIndex = -1 Then MessageBox.Show("Debe ingresar Nro de Lote", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         If dtpFV.Value <= dtpFecha.Value Then MessageBox.Show("Debe Ingresar Una Fecha Mayor a la Fecha de Contrato", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information) : dtpFV.Select() : Exit Sub
-
         If MessageBox.Show("Esta seguro de guardar los datos", "Mensaje de Consulta", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = Windows.Forms.DialogResult.Yes Then
             If Oper = 1 Then
                 'Verificar por segunda vez registro de numero sis

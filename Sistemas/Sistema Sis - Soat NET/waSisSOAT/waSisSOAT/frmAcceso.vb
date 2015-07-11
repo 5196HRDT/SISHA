@@ -13,6 +13,7 @@ Public Class frmAcceso
             IdUsuario = dsTabla.Tables(0).Rows(0)("IdUsuario")
             Inicial = dsTabla.Tables(0).Rows(0)("Inicial")
             NivelSistema = dsTabla.Tables(0).Rows(0)("Nivel")
+            NombreUsuario = dsTabla.Tables(0).Rows(0)("Nombres")
             UsuarioSistema = txtUsuario.Text
             objUsuario.TracerLogin(UsuarioSistema, My.Computer.Name)
             If Inicial = "1" Then
